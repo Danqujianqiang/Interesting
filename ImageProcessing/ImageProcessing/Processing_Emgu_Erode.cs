@@ -4,22 +4,21 @@ using System.Windows.Controls;
 
 namespace ImageProcessing
 {
-    class Processing_SmoothMedian : Processing_Emgu
+    class Processing_Emgu_Erode : Processing_Emgu
     {
-        public Processing_SmoothMedian()
+        public Processing_Emgu_Erode()
         {
             _Control = new Ui_Slider(this); //加入滑动条
             Level = 50;
         }
 
-        public override string Name { get { return "SmoothMedian"; } } //函数名
+        public override string Name { get { return "Erode"; } } //函数名
         public override UserControl Control { get { return _Control; } }
         private Ui_Slider _Control;
         public double Level { get; set; }
-
         protected override IImage ProcessImage_Emgu(Image<Bgr, byte> img)
         {
-            return img.SmoothMedian((int)(Level / 10) * 2 + 1);
+            return img.Erode((int)Level / 20);
         }
     }
 }

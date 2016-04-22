@@ -4,19 +4,18 @@ using static Dehaze;
 
 namespace ImageProcessing
 {
-    public class Processing_DarkChannel : Processing_Emgu
+    public class Processing_Emgu_Dehaze : Processing_Emgu
     {
         public override string Name
         {
             get
             {
-                return "DarkChannel";
+                return "Dehaze";
             }
         }
-
         protected override IImage ProcessImage_Emgu(Image<Bgr, byte> img)
         {
-            return getMedianDarkChannel(img, 5);
+            return Dehaze_Image(img);
         }
     }
 }

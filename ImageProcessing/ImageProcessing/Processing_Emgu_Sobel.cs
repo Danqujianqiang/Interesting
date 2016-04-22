@@ -6,12 +6,12 @@ using System;
 
 namespace ImageProcessing
 {
-    class Processing_SmoothBilatral : Processing_Emgu
+    class Processing_Emgu_Sobel : Processing_Emgu
     {
-        public override string Name { get { return "SmoothBilatral"; } } //函数名
+        public override string Name { get { return "Sobel"; } } //函数
         protected override IImage ProcessImage_Emgu(Image<Bgr, byte> img)
         {
-            return img.SmoothBilatral(51, 100, 100);
+            return img.Sobel(1, 0, 3);
         }
     }
 }

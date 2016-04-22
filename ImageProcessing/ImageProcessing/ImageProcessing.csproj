@@ -81,16 +81,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Processing.cs" />
-    <Compile Include="Processing_DarkChannel.cs" />
-    <Compile Include="Processing_Dehaze.cs" />
+    <Compile Include="Processing_Emgu_DarkChannel.cs" />
+    <Compile Include="Processing_Emgu_Dehaze.cs" />
     <Compile Include="Processing_Border.cs" />
     <Compile Include="Processing_Emgu.cs" />
-    <Compile Include="Processing_Erode.cs" />
-    <Compile Include="Processing_Sobel.cs" />
-    <Compile Include="Processing_SmoothMedian.cs" />
-    <Compile Include="Processing_SmoothBilatral.cs" />
-    <Compile Include="Processing_SmoothBlur.cs" />
-    <Compile Include="Processing_SmoothGaussian.cs" />
+    <Compile Include="Processing_Emgu_Erode.cs" />
+    <Compile Include="Processing_Emgu_Sobel.cs" />
+    <Compile Include="Processing_Emgu_SmoothMedian.cs" />
+    <Compile Include="Processing_Emgu_SmoothBilatral.cs" />
+    <Compile Include="Processing_Emgu_SmoothBlur.cs" />
+    <Compile Include="Processing_Emgu_SmoothGaussian.cs" />
     <Compile Include="Processing_HalfSize.cs" />
     <Compile Include="Processing_IncSaturation.cs" />
     <Compile Include="Processing_IncBrightness.cs" />

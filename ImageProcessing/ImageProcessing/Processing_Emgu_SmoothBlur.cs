@@ -4,15 +4,15 @@ using System.Windows.Controls;
 
 namespace ImageProcessing
 {
-    class Processing_SmoothGaussian : Processing_Emgu
+    class Processing_Emgu_SmoothBlur : Processing_Emgu
     {
-        public Processing_SmoothGaussian()
+        public Processing_SmoothBlur()
         {
             _Control = new Ui_Slider(this); //加入滑动条
             Level = 50;
         }
 
-        public override string Name { get { return "SmoothGaussian"; } } //函数名
+        public override string Name { get { return "SmoothBlur"; } } //函数名
         public override UserControl Control { get { return _Control; } }
         private Ui_Slider _Control;
 
@@ -20,7 +20,8 @@ namespace ImageProcessing
 
         protected override IImage ProcessImage_Emgu(Image<Bgr, byte> img)
         {
-            return img.SmoothGaussian((int)(Level / 5) * 2 + 1);
+            int temp = 5+(int)Level/5;
+            return img.SmoothBlur(temp, temp);
         }
     }
 }
